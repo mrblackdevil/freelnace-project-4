@@ -1,0 +1,10 @@
+/* font-family: "Gotham Pro Bold"; */
+@font-face {
+	font-family: "GothamProBold";
+	src:url(../fonts/Gotham/Gotham Pro Bold.otf);
+}
+/* font-family: "GothaPro"; */
+@font-face {
+	font-family: "GothaProLigIta";
+	src:url(../fonts/Gotham/Gotham Pro.otf);
+}
