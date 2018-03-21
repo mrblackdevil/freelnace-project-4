@@ -1,10 +1,20 @@
 /* font-family: "Gotham Pro Bold"; */
 @font-face {
 	font-family: "GothamProBold";
-	src:url(../fonts/Gotham/Gotham Pro Bold.otf);
+	src:url(../fonts/Gotham/GothamProBold.otf);
 }
 /* font-family: "GothaPro"; */
 @font-face {
 	font-family: "GothaProLigIta";
 	src:url(../fonts/Gotham/Gotham Pro.otf);
+}
+/* font-family: "MyRiadProReg"; */
+@font-face {
+	font-family: "MyRiadProReg";
+	src:url(../fonts/MyRiadPro/MyriadProRegular.otf);
+}
+/* font-family: "MyRiadPro"; */
+@font-face {
+	font-family: "MyRiadProBold";
+	src:url(../fonts/MyRiadPro/MyriadProBold.otf);
 }

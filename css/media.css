@@ -1,14 +1,33 @@
 /*==========  Desktop First Method  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px) {
-/*header*/
+@media only screen and (max-width : 1199px) {
+	#phone-edit{
+		margin-left:0;
+	}
+	.free-consulting-form  {
+		margin-bottom: 250px;
+
+	}
+	.footer {
+    height: 415px;
+	}
+	.bpic {
+		display: none;
+	}
+	.bpic1 {
+		display: none;
+	}
+	.free-consulting-form  {
+		margin-top: -50px;
+	}
+	/*header*/
 	.container {
 		overflow: hidden;
 	}
 	.preparation-document {
 		width: 100%;
-		margin-top: -250px;
+		margin-top: -421px;
 	}
 	.main-header {
 		width: 100%;
@@ -105,11 +124,12 @@
 		width: 48%;
 	}
 	.preparation-content-box p {
-		margin-bottom: 45px;
+		margin-bottom: 0px;
+		height: auto;
 	}
 	.all-in-box {
 		width: 100%;
-		height: 442px;
+	    height: 355px;
 		margin-top: 50px;
 		margin-bottom: 10px;
 	}
@@ -174,7 +194,7 @@
 	}
 	.specialist-price-title {
 		width: 100%;
-		height: 100px;
+		height: 75px;
 		margin-left: 0;
 	}
 	.specialist-price-title h3 {
@@ -183,7 +203,6 @@
 	}
 	.specialist-all-in {
 		width: 100%;
-		margin-top: 70px;
 	}
 	.specialist-all-in a {
 		margin-left: 0;
@@ -191,9 +210,7 @@
 	.specialist-all-in b {
 		margin-left: 0;
 	}
-	.specialist-all-in p {
-		width: 60%;
-	}
+
 	.ready-specialist {
 		width: 100%;
 		margin-left: 0;
@@ -203,7 +220,6 @@
 	}
 	.ready-specialist p {
 		font-weight: 400;
-		width: 60%;
 	}
 	.ready-specialist a {
 		margin-left: 0;
@@ -213,9 +229,6 @@
 	}
 	.correct-your-specialist {
 		width: 100%;
-	}
-	.correct-your-specialist p {
-		width: 50%;
 	}
 	.specialist-title-end  {
 		width: 100%;
@@ -229,15 +242,18 @@
 		margin-left: -60px;
 	}
 	.price-generator {
-		width: 123%;
 		height: auto;
+	}
+	.price-result-box {
+    height: auto;
 	}
 	.price-result {
 		width: 50%;
 	}
 	.check-first-block {
 		width:100%;
-		margin-left: 0
+		margin-left: 0;
+		margin-bottom: 27px;
 	}
 	.check-second-block {
 		width: 100%;
@@ -253,7 +269,7 @@
 	}
 	.check-second-block span, 
 	.check-first-block span {
-		margin-top: 7px;
+		margin-top: -2px;
 		margin-left: -25px;
 	}
 	/*Second Phase*/
@@ -272,11 +288,11 @@
 		line-height: 40px;
 		margin-bottom: 25px;
 	}
+
 	/*FAQ*/
 	.faq-help-box {
 		float: left;
 		width: 100%;
-		margin-top: 450px;
 	}
 	.accordion {
 		width: 45%;
@@ -289,7 +305,6 @@
 		margin-left: 0px;
 	}
 	.map-exp img {
-		margin-left: 90px;
 		margin-top: 0px;
 	}
 	/*Experience*/
@@ -300,35 +315,7 @@
 		width: 100%;
 	}
 	/*Feedback*/
-	.slide-img {
-		width: 70%;
-		margin-left: 0;
-	}
-	#slidewrapper {
-		position: relative;
-		width: calc(100% * 6);
-	}
-	.slide {
-		width: calc(100%/6);
-	}
-	.owl-prev {
-		margin-left: 20%;
-	}
-	.owl-next {
-		margin-left: 70%;
-	}
-	#prev-btn {
-		margin-left: 0%;
-	}
-	#next-btn {
-		margin-right: 0%;
-	}
-	#prev-btn, #next-btn {
-		top: calc(97% - 28px);
-	}
-	#nav-btns {
-		margin-left: 0%;
-	}
+	
 	/*Footer*/
 	.contacts {
 		width: 100%;
@@ -339,66 +326,98 @@
 		margin-left: 15px;
 		margin-top: -270px;
 	}
-	#map {
-		margin-top: -450px;
-	}
+
 	.footer-block {
-		width: 100%;
-		margin: 30px 0;
+		margin-left: 0;
 	}
 	.logo-footer {
-		width: 100%;
-		margin-top: 150px;
+		display: inline-block;
 	}
 	.contacts-call {
 		margin-bottom: 100px;
 	}
 	.doc-right {
-		float: right;
-		width: 100%;
+		display: inline-block;
 	}
-	#callback h3 {
-	font-size: 30px;
-	font-weight: 700;
-	line-height: 35px;
-	color: #fff;
-}
-#callback p {
-	width: 100%;
-	color: #fff;
-}
-#callback b {
-	margin-left: 0;
-	font-size: 12px;
-	font-weight: 700;
-}
-#callback input[type=text] {
-	width: 45%;
-	height: 42px;
-	margin-left: 3%;
-	margin-top: 15px;
-	outline: none;
-	background-color: #070a0d;
-	border: 2px solid #707b86;
-}
-#callback input[type=textarea] {
-	width: 100%;
-	height: 78px;
-	margin-top: 15px;
-	outline: none;
-	background-color: #070a0d;
-	border: 2px solid #707b86;
-}
-#phone-edit {
-	margin-left: 38px;
-}
-.button-popup {
-	width: 35%;
-}
+	.pop_form h3 {
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 35px;
+		color: #fff;
+	}
+	.pop_form p {
+		width: 100%;
+		color: #fff;
+	}
+	.pop_form b {
+		margin-left: 0;
+		font-size: 12px;
+		font-weight: 700;
+	}
+	.pop_form input[type=text] {
+		width: 45%;
+		height: 42px;
+		margin-left: 3%;
+		margin-top: 15px;
+		outline: none;
+		background-color: #070a0d;
+		border: 2px solid #707b86;
+	}
+	.pop_form input[type=textarea] {
+		width: 100%;
+		height: 78px;
+		margin-top: 15px;
+		outline: none;
+		background-color: #070a0d;
+		border: 2px solid #707b86;
+	}
+	.button-popup {
+		width: 35%;
+	}
+
+	.contacts-info {
+		width: 36%;
+	}
+	.map-exp {
+		margin-bottom: 80px;
+	}
+	.preparation-content-box {
+		margin-bottom: 40px;
+	}
+	.specialist-title-first img,.specialist-title-second img,.specialist-title-end h4,.specialist-title-end h4 img {
+		margin-left: 0;
+	}
+	.specialist-title-second {
+		margin: 0;
+	}
+	.specialist-all-in p,.ready-specialist p {
+		padding-right: 25px;
+	}
+	.owl-prev {
+		margin-left: 82.9%;
+	}
+	.owl-next {
+		margin-left: 94.5%;
+	}
+	.footerdots{
+		display:none;
+	}
+	.footer-block{
+		background: url(../img/footer.png) no-repeat 242px center;
+	}
+	.faq-help-box h4 {
+		margin-top: 40px;
+	}
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+	.white-wrapper {
+		padding-bottom: 1px;
+	}
+	img.fdots{
+		display:none;
+	}
 	/*header*/
 	.container {
 		overflow: hidden;
@@ -467,7 +486,7 @@
 		margin-left: 35px;
 	}
 	.application-block button {
-		width: 100%;
+		width: 71%;
 		margin-bottom: 20px;
 	}
 	.application-block input[type=text] {
@@ -505,7 +524,7 @@
 	}
 	.all-in-box {
 		width: 100%;
-		height: 442px;
+		height: 390px;
 		margin-top: 50px;
 		margin-bottom: 10px;
 	}
@@ -552,7 +571,7 @@
 		margin-bottom: 100px;
 	}
 	.list-line-pic {
-		margin-left: -174px !important;
+		margin-left: -154px !important;
 	}
 	.stages-of-services-list {
 		width: 80%;
@@ -570,7 +589,7 @@
 	}
 	.specialist-price-title {
 		width: 100%;
-		height: 100px;
+		height: 80px;
 		margin-left: 0;
 	}
 	.specialist-price-title h3 {
@@ -579,7 +598,7 @@
 	}
 	.specialist-all-in {
 		width: 100%;
-		margin-top: 70px;
+		margin-top: 20px;
 	}
 	.specialist-all-in a {
 		margin-left: 0;
@@ -587,19 +606,15 @@
 	.specialist-all-in b {
 		margin-left: 0;
 	}
-	.specialist-all-in p {
-		width: 60%;
-	}
 	.ready-specialist {
 		width: 100%;
 		margin-left: 0;
 	}
 	.specialist-title-second {
-		margin: 0 -4%;
+		margin: 0;
 	}
 	.ready-specialist p {
 		font-weight: 400;
-		width: 60%;
 	}
 	.ready-specialist a {
 		margin-left: 0;
@@ -610,22 +625,17 @@
 	.correct-your-specialist {
 		width: 100%;
 	}
-	.correct-your-specialist p {
-		width: 50%;
-	}
 	.specialist-title-end  {
 		width: 100%;
 		margin-left: 0;
 	}
 	.specialist-title-end h4 {
-		width: 50%;
 		margin-left: 27px;
 	}
 	.specialist-title-end h4 img {
-		margin-left: -60px;
+		margin-left: -32px;
 	}
 	.price-generator {
-		width: 123%;
 		height: auto;
 	}
 	.price-result {
@@ -672,7 +682,6 @@
 	.faq-help-box {
 		float: left;
 		width: 100%;
-		margin-top: 850px;
 	}
 	.accordion {
 		width: 100%;
@@ -687,6 +696,7 @@
 		margin-left: 90px;
 		margin-top: 0px;
 	}
+
 	/*Experience*/
 	.experience-box {
 		width: 100%;
@@ -694,35 +704,13 @@
 	.counter-box {
 		width: 100%;
 	}
+	/*Slider*/
 	/*Feedback*/
-	.slide-img {
-		width: 79%;
-		margin-left: 0;
-	}
-	#slidewrapper {
-		position: relative;
-		width: calc(100% * 4);
-	}
-	.slide {
-		width: calc(100%/4);
-	}
 	.owl-prev {
-		margin-left: 20%;
+		margin-left: 82.9%;
 	}
 	.owl-next {
-		margin-left: 70%;
-	}
-	#prev-btn {
-		margin-left: 0%;
-	}
-	#next-btn {
-		margin-right: 0%;
-	}
-	#prev-btn, #next-btn {
-		top: calc(97% - 28px);
-	}
-	#nav-btns {
-		margin-left: 0%;
+		margin-left: 96.5%;
 	}
 	/*Footer*/
 	.contacts {
@@ -734,71 +722,96 @@
 		margin-left: 15px;
 		margin-top: -270px;
 	}
-	.map {
-		width: 40%;
-		height: 40%;
-		margin-top: -400px
-	}
 	.footer-block {
 		width: 100%;
-		margin: 30px 0;
+		margin-top: 0;
+		margin-bottom: 0px;
 	}
 	.logo-footer {
-		width: 100%;
-		margin-top: 150px;
+		display:inline-block;
 	}
 	.contacts-call {
 		margin-bottom: 100px;
 	}
 	.doc-right {
-		float: right;
-		width: 100%;
+		display:inline-block;
 	}
-		/*POpuP*/
-#callback h3 {
-	font-size: 30px;
-	font-weight: 700;
-	line-height: 35px;
-	color: #fff;
-}
-#callback p {
-	width: 100%;
-	color: #fff;
-}
-#callback b {
-	margin-left: 0;
-	font-size: 12px;
-	font-weight: 700;
-}
-#callback input[type=text] {
-	width: 45%;
-	height: 42px;
-	margin-left: 3%;
-	margin-top: 15px;
-	outline: none;
-	background-color: #070a0d;
-	border: 2px solid #707b86;
-}
-#callback input[type=textarea] {
-	width: 100%;
-	height: 78px;
-	margin-top: 15px;
-	outline: none;
-	background-color: #070a0d;
-	border: 2px solid #707b86;
-}
-#phone-edit {
-	margin-left: 38px;
-}
-.button-popup {
-	width: 35%;
-}
+	/*POpuP*/
+	.pop_form h3 {
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 35px;
+		color: #fff;
+	}
+	.pop_form p {
+		width: 100%;
+		color: #fff;
+	}
+	.pop_form b {
+		margin-left: 0;
+		font-size: 12px;
+		font-weight: 700;
+	}
+	.pop_form input[type=text] {
+		width: 45%;
+		height: 42px;
+		margin-left: 3%;
+		margin-top: 15px;
+		outline: none;
+		background-color: #070a0d;
+		border: 2px solid #707b86;
+	}
+	.pop_form input[type=textarea] {
+		width: 100%;
+		height: 78px;
+		margin-top: 15px;
+		outline: none;
+		background-color: #070a0d;
+		border: 2px solid #707b86;
+	}
+	.button-popup {
+		width: 35%;
+	}
+	.free-consulting-form  {
+		margin-bottom: 250px;
+	}
+	.pop_form {
+		max-height: 665px !important;
+	}
+	.preparation-content-box p {
+		margin-bottom: 0;
+	}
+	.all-in-content {
+		padding: 0 20px;
+	}
+	.map-exp{
+		float: none;
+		position: relative;
+		top: -65px;
+		left: 30px;
+	}
+	.navigate-wrapper{
+		display: none;
+	}
+	.owl-dots {
+		right: 30px;
+	}
+	.contacts-info address {
+		width: 40%;
+	}
 }
 
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+	
+	.free-consulting-form  {
+		margin-bottom: 250px;
+	}
+	.pop_form {
+		max-height: 665px !important;
+	}
 	/*header*/
 	.container {
 		overflow: hidden;
@@ -842,6 +855,7 @@
 	.information-block h1 {
 		width: 100%;
 		font-size: 40px;
+		line-height: 1.2em;
 	}
 	.information-block h4 {
 		width: 100%;
@@ -898,7 +912,7 @@
 		width: 100%;
 	}
 	.preparation-content-box p {
-		margin-bottom: 45px;
+		margin-bottom: 0;
 	}
 	.all-in-box {
 		width: 100%;
@@ -914,8 +928,10 @@
 		margin-left: 4px;
 	}
 	.all-in-price {
-		width: 100%;
-		margin: 0 -37%;
+		width: auto;
+		margin: 0 auto;
+		display: table;
+		float: none;
 	}
 	.free-consultation {
 		width: 100%;
@@ -952,10 +968,13 @@
 		margin-left: -174px !important;
 	}
 	.stages-of-services-list {
-		width: 80%;
+		width: 100%;
 		margin-top:  0px;
 		margin-left: -30px;
 		line-height: 23px;
+	}
+	.stages-of-services-list li {
+		width: 100%;
 	}
 	./*Specialist work*/
 	.specialist-work {
@@ -967,7 +986,7 @@
 	}
 	.specialist-price-title {
 		width: 100%;
-		height: 100px;
+		height: 120px;
 		margin-left: 0;
 	}
 	.specialist-price-title h3 {
@@ -976,7 +995,7 @@
 	}
 	.specialist-all-in {
 		width: 100%;
-		margin-top: 70px;
+		margin-top: 0;
 	}
 	.specialist-all-in a {
 		margin-left: 0;
@@ -984,19 +1003,15 @@
 	.specialist-all-in b {
 		margin-left: 0;
 	}
-	.specialist-all-in p {
-		width: 60%;
-	}
 	.ready-specialist {
 		width: 100%;
 		margin-left: 0;
 	}
 	.specialist-title-second {
-		margin: 0 -4%;
+		margin: 0;
 	}
 	.ready-specialist p {
 		font-weight: 400;
-		width: 60%;
 	}
 	.ready-specialist a {
 		margin-left: 0;
@@ -1007,22 +1022,18 @@
 	.correct-your-specialist {
 		width: 100%;
 	}
-	.correct-your-specialist p {
-		width: 50%;
-	}
 	.specialist-title-end  {
 		width: 100%;
 		margin-left: 0;
 	}
 	.specialist-title-end h4 {
-		width: 50%;
+		width: 100%;
 		margin-left: 27px;
 	}
 	.specialist-title-end h4 img {
-		margin-left: -60px;
+		margin-left: -26px;
 	}
 	.price-generator {
-		width: 123%;
 		height: auto;
 	}
 	.check-first-block {
@@ -1053,7 +1064,7 @@
 	}
 	.second-phase a {
 		margin-left: 10px;
-		margin-top: 250px;
+		margin-top: 300px;
 	}
 	.second-phase-list {
 		height: 400px;
@@ -1065,7 +1076,7 @@
 	.faq-help-box {
 		float: left;
 		width: 100%;
-		margin-top: 850px;
+		margin-top: 0;
 	}
 	.accordion {
 		width: 100%;
@@ -1077,45 +1088,30 @@
 		margin-left: 0px;
 	}
 	.map-exp img {
-		margin-left: 90px;
+		margin-left: 0;
 		margin-top: 0px;
 	}
 	/*Experience*/
+	.experience {
+		height: auto;
+	}
 	.experience-box {
 		width: 100%;
+		text-align: center;
 	}
 	.counter-box {
 		width: 100%;
+		    height: auto;
+	}
+	.experience-box h4 {
+		margin-bottom: 15px;
 	}
 	/*Feedback*/
-	.slide-img {
-		width: 89%;
-		margin-left: 0;
-	}
-	#slidewrapper {
-		position: relative;
-		width: calc(100% * 3);
-	}
-	.slide {
-		width: calc(100%/3);
-	}
 	.owl-prev {
-		margin-left: 20%;
+		margin-left: 84.9%;
 	}
 	.owl-next {
-		margin-left: 70%;
-	}
-	#prev-btn {
-		margin-left: 0%;
-	}
-	#next-btn {
-		margin-right: 0%;
-	}
-	#prev-btn, #next-btn {
-		top: calc(97% - 28px);
-	}
-	#nav-btns {
-		margin-left: -5%;
+		margin-left: 96.5%;
 	}
 	/*Footer*/
 	.contacts {
@@ -1127,14 +1123,11 @@
 		margin-left: 15px;
 		margin-top: -270px;
 	}
-	.map {
-		width: 40%;
-		height: 40%;
-		margin-top: -400px
-	}
+
 	.footer-block {
-		width: 100%;
-		margin: 30px 0;
+		width: 150%;
+				margin-top: 55px;
+		margin-bottom: 0px;
 	}
 	.logo-footer {
 		width: 100%;
@@ -1147,47 +1140,112 @@
 		float: right;
 		width: 100%;
 	}
-		/*POpuP*/
-#callback h3 {
-	font-size: 30px;
-	font-weight: 700;
-	line-height: 35px;
-	color: #fff;
-}
-#callback p {
-	width: 100%;
-	color: #fff;
-}
-#callback b {
-	margin-left: 0;
-	font-size: 12px;
-	font-weight: 700;
-}
-#callback input[type=text] {
-	width: 45%;
-	height: 42px;
-	margin-top: 15px;
-	margin-left: 3%;
-	outline: none;
-	background-color: #070a0d;
-	border: 2px solid #707b86;
-}
-#callback input[type=textarea] {
-	width: 100%;
-	height: 78px;
-	margin-top: 15px;
-	outline: none;
-	background-color: #070a0d;
-	border: 2px solid #707b86;
-}
-.button-popup {
-	width: 100%;
-}
+	/*POpuP*/
+	.pop_form h3 {
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 35px;
+		color: #fff;
+	}
+	.pop_form p {
+		width: 100%;
+		color: #fff;
+	}
+	.pop_form b {
+		margin-left: 0;
+		font-size: 12px;
+		font-weight: 700;
+	}
+	.pop_form input[type=text] {
+		width: 45%;
+		height: 42px;
+		margin-top: 15px;
+		margin-left: 3%;
+		outline: none;
+		background-color: #070a0d;
+		border: 2px solid #707b86;
+	}
+	.pop_form input[type=textarea] {
+		width: 100%;
+		height: 78px;
+		margin-top: 15px;
+		outline: none;
+		background-color: #070a0d;
+		border: 2px solid #707b86;
+	}
+	.button-popup {
+		width: 100%;
+	}
+
+	.specialist-price {
+		margin-top: 55px;
+	}
+	.map-exp {
+		float: none;
+		position: relative;
+		top: 0;
+		left: 0;
+		margin: 0;
+		margin: 0 auto 30px;
+	}
+	.counter-box {
+		width: 100%;
+		float: none;
+		margin: 0;
+	}
+	.specialist-work {
+    height: auto;
+	}
+	.owl-nav {
+		position: absolute;
+		top: -71px;
+		right: 3px;
+	}
+	.owl-prev, .owl-next {
+		display: inline-block;
+		margin: 0;
+		position: relative;
+		top: 0;
+	}
+	.owl-prev {
+		margin-right: 43px!important;
+	}
+	.owl-dots {
+		right: 58px;
+	}
+	.google-map {
+		width: 100%;
+		height: 200px;
+		float: none;
+		position: relative;
+		z-index: 99;
+	}
+	.black-bg {
+		background: black;
+		width: 100%;
+		height: 100%;
+		float: none;
+	}
+	.map-gradient {
+		display: none;
+	}
+	.contacts-info address {
+		width: 100%;
+	}
+	.footer {
+		height: 330px;
+	}
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
 	/*header*/
+	.google-map {
+		display: none;
+	}
+	.footer {
+		height: 372px;
+	}
 	.container {
 		overflow: hidden;
 	}
@@ -1250,7 +1308,7 @@
 		font-size: 15px;
 	}
 	.application-block button {
-		width: 100%;
+		width: 88%;
 		margin-bottom: 20px;
 	}
 	.application-block input[type=text] {
@@ -1284,11 +1342,15 @@
 		width: 100%;
 	}
 	.preparation-content-box p {
-		margin-bottom: 45px;
+		margin-bottom: 0;
+	}
+	.preparation-content-box{
+		height:auto;
+		    margin-bottom: 0;
 	}
 	.all-in-box {
 		width: 100%;
-		height: 442px;
+		height: 475px;
 		margin-top: 50px;
 		margin-bottom: 10px;
 	}
@@ -1300,8 +1362,8 @@
 		margin-left: 4px;
 	}
 	.all-in-price {
-		width: 100%;
-		margin: 0 -20%;
+		width: auto;
+		margin: 0 auto;
 	}
 	.free-consultation {
 		width: 100%;
@@ -1331,14 +1393,14 @@
 		float: none;
 		position: absolute;
 		display: block;
-		margin-top: 250px;
+		margin-top: 330px;
 		margin-bottom: 100px;
 	}
 	.list-line-pic {
 		margin-left: -174px !important;
 	}
 	.stages-of-services-list {
-		width: 80%;
+		width: 100%;
 		margin-top:  0px;
 		margin-left: -30px;
 		line-height: 23px;
@@ -1349,20 +1411,27 @@
 	}
 	.specialist-price {
 		width: 100%;
-		height: 1210px;
+		height: 0;
+	}
+	.faq-help-box h4 {
+		    margin-top: 25px;
 	}
 	.specialist-price-title {
 		width: 100%;
-		height: 200px;
 		margin-left: 0;
+		background: transparent;
+		border: 0;
 	}
 	.specialist-price-title h3 {
 		width: 100%;
 		line-height: 40px;
+		color: #000;
 	}
 	.specialist-all-in {
 		width: 100%;
-		margin-top: 70px;
+	}
+	.specialist-post{
+		width: 100%;
 	}
 	.specialist-all-in a {
 		margin-left: 0;
@@ -1371,7 +1440,7 @@
 		margin-left: 0;
 	}
 	.specialist-all-in p {
-		width: 60%;
+		width: 100%;
 	}
 	.ready-specialist {
 		width: 100%;
@@ -1382,7 +1451,7 @@
 	}
 	.ready-specialist p {
 		font-weight: 400;
-		width: 60%;
+		width: 100%;
 	}
 	.ready-specialist a {
 		margin-left: 0;
@@ -1394,21 +1463,23 @@
 		width: 100%;
 	}
 	.correct-your-specialist p {
-		width: 50%;
+		width: 100%;
+	}
+	.specialist-title-first img, .specialist-title-second img, .specialist-title-end h4 img{
+		display:block;
 	}
 	.specialist-title-end  {
 		width: 100%;
 		margin-left: 0;
 	}
 	.specialist-title-end h4 {
-		width: 50%;
-		margin-left: 27px;
+		width: 100%;
+		margin-left: 0;
 	}
 	.specialist-title-end h4 img {
-		margin-left: -60px;
+		margin-left: 0;
 	}
 	.price-generator {
-		width: 123%;
 		height: auto;
 	}
 	.check-first-block {
@@ -1439,7 +1510,7 @@
 	}
 	.second-phase a {
 		margin-left: 10px;
-		margin-top: 250px;
+		margin-top: 370px;
 	}
 	.second-phase-list {
 		height: 400px;
@@ -1450,7 +1521,7 @@
 	.faq-help-box {
 		float: left;
 		width: 100%;
-		margin-top: 1285px;
+		margin-top: 0;
 	}
 	.accordion {
 		width: 100%;
@@ -1462,7 +1533,7 @@
 		margin-left: 0px;
 	}
 	.map-exp img {
-		margin-left: 90px;
+		margin-left: 0;
 		margin-top: 0px;
 	}
 	/*Experience*/
@@ -1472,35 +1543,20 @@
 	.counter-box {
 		width: 100%;
 	}
-	/*Feedback*/
-	.slide-img {
-		width: 95%;
-		margin-left: 0;
+	.owl-nav{
+		position:relative;
+		top: auto;
+		right: auto;
 	}
-	#slidewrapper {
+	.owl-dots {
 		position: relative;
-		width: calc(100% * 5);
-	}
-	.slide {
-		width: calc(100%/3.9);
-	}
-	.owl-prev {
-		margin-left: 20%;
+		top: -50px;
+		right: auto;
+		left: 28px;
 	}
 	.owl-next {
-		margin-left: 70%;
-	}
-	#prev-btn {
-		margin-left: 0%;
-	}
-	#next-btn {
-		margin-right: 0%;
-	}
-	#prev-btn, #next-btn {
-		top: calc(97% - 28px);
-	}
-	#nav-btns {
-		margin-left: -5%;
+		z-index: 999;
+		position: relative;
 	}
 	/*Footer*/
 	.contacts {
@@ -1515,15 +1571,21 @@
 	.map {
 		width: 40%;
 		height: 40%;
-		margin-top: -400px
+		margin-top: -400px;
 	}
 	.footer-block {
+		width: 150%;
+		margin-top: 400px;
+		margin-bottom: 0px;
 		width: 100%;
-		margin: 30px 0;
+		margin-top: 0;
+		margin-bottom: 0px;
+		margin: 0;
 	}
 	.logo-footer {
 		width: 100%;
 		margin-top: 150px;
+		    margin-bottom: 30px;
 	}
 	.contacts-call {
 		margin-bottom: 100px;
@@ -1533,48 +1595,63 @@
 		width: 100%;
 	}
 	/*POpuP*/
-#callback h3 {
-	font-size: 30px;
-	font-weight: 700;
-	line-height: 35px;
-	color: #fff;
-}
-#callback p {
-	width: 100%;
-	color: #fff;
-}
-#callback b {
-	margin-left: 0;
-	font-size: 12px;
-	font-weight: 700;
-}
-#callback input[type=text] {
-	width: 100%;
-	height: 42px;
-	margin-left: 0;
-	margin-top: 15px;
-	outline: none;
-	background-color: #070a0d;
-	border: 2px solid #707b86;
-}
-#callback input[type=textarea] {
-	width: 100%;
-	height: 78px;
-	margin-top: 15px;
-	outline: none;
-	background-color: #070a0d;
-	border: 2px solid #707b86;
-}
-#phone-edit {
-	margin-left: 38px;
-}
-.button-popup {
-	width: 100%;
-}
+	.pop_form h3 {
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 35px;
+		color: #fff;
+	}
+	.pop_form p {
+		width: 100%;
+		color: #fff;
+	}
+	.pop_form b {
+		margin-left: 0;
+		font-size: 12px;
+		font-weight: 700;
+	}
+	.pop_form input[type=text] {
+		width: 100%;
+		height: 42px;
+		margin-left: 0;
+		margin-top: 15px;
+		outline: none;
+		background-color: #070a0d;
+		border: 2px solid #707b86;
+	}
+	.pop_form input[type=textarea] {
+		width: 100%;
+		height: 78px;
+		margin-top: 15px;
+		outline: none;
+		background-color: #070a0d;
+		border: 2px solid #707b86;
+	}
+	.button-popup {
+		width: 100%;
+	}
+	#map {
+		top: 1150px;
+		left: 0%;
+		overflow: visible !important;
+	}
+	.free-consulting-form  {
+		margin-bottom: 250px;
+		top: 135px;
+	}
+	.pop_form {
+		max-height: 665px !important;
+	}
+
 }
 /* Custom, iPhone Retina */
-@media only screen and (max-width : 354px) {
-
+@media only screen and (max-width : 350px) {
+	.faq-help-box {
+		margin-top: 1925px;
+	}
+	.faq-help-box h4 {
+		margin-top: 0;
+	}
 }
 
 

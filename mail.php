@@ -1,6 +1,6 @@
 <?php
 
-$recepient = "your@mail.ru";
+$recepient = "spamcheck@strogov.ru,9978170@gmail.com,sro.nrs.2701@gmail.com";
 $sitename = "TLConsulting - Юридическая компания";
 
 $name = trim($_POST["name"]);

@@ -120,7 +120,7 @@ $(document).ready(function() {
 	
 	//Аякс отправка форм
 	//Документация: http://api.jquery.com/jquery.ajax/
-	$("#callback").submit(function() {
+	/* $("#callback").submit(function() {
 		$.ajax({
 			type: "POST",
 			url: "mail.php",
@@ -132,24 +132,27 @@ $(document).ready(function() {
 			}, 1000);
 		});
 		return false;
+	}); */
+	$("#callback,#callback2,#callback3,#application-form,#consult-form").submit(function(e) { //устанавливаем событие отправки для формы с id=form
+	  var form_data = $(this).serialize(); //собераем все данные из формы
+	  $.ajax({
+		type: "POST", //Метод отправки
+		url: "mail.php", //путь до php фаила отправителя
+		data: form_data,
+		success: function() {
+		  $.fancybox.close();
+		  //код в этом блоке выполняется при успешной отправке сообщения
+		  swal(
+			'Спасибо!',
+			'С вами скоро свяжутся!',
+			'success'
+		  );
+		}
+	  });
+	  e.preventDefault();
 	});
 
 });
-    //Аякс отправка форм
-    //Документация: http://api.jquery.com/jquery.ajax/
-    $("#application-form").submit(function() {
-      $.ajax({
-        type: "POST",
-        url: "mail.php",
-        data: $("#callback").serialize()
-      }).done(function() {
-        alert("Спасибо за заявку!");
-        setTimeout(function() {
-          $.fancybox.close();
-        }, 1000);
-      });
-      return false;
-    });
 
 
 
@@ -167,79 +170,7 @@ $(document).ready(function() {
 
 
     //  Slider
-    var slideNow = 1;
-    var slideCount = $('#slidewrapper').children().length;
-    var slideInterval = 3000;
-    var navBtnId = 0;
-    var translateWidth = 0;
-
-    $(document).ready(function() {
-      var switchInterval = setInterval(nextSlide, slideInterval);
-
-      $('#viewport').hover(function() {
-        clearInterval(switchInterval);
-      }, function() {
-        switchInterval = setInterval(nextSlide, slideInterval);
-      });
-
-      $('#next-btn').click(function() {
-        nextSlide();
-      });
-
-      $('#prev-btn').click(function() {
-        prevSlide();
-      });
-
-      $('.slide-nav-btn').click(function() {
-        navBtnId = $(this).index();
-
-        if (navBtnId + 1 != slideNow) {
-          translateWidth = -$('#viewport').width() * (navBtnId);
-          $('#slidewrapper').css({
-            'transform': 'translate(' + translateWidth + 'px, 0)',
-            '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
-            '-ms-transform': 'translate(' + translateWidth + 'px, 0)',
-          });
-          slideNow = navBtnId + 1;
-        }
-      });
-    });
-
-
-    function nextSlide() {
-      if (slideNow == slideCount || slideNow <= 0 || slideNow > slideCount) {
-        $('#slidewrapper').css('transform', 'translate(0, 0)');
-        slideNow = 1;
-      } else {
-        translateWidth = -$('#viewport').width() * (slideNow);
-        $('#slidewrapper').css({
-          'transform': 'translate(' + translateWidth + 'px, 0)',
-          '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
-          '-ms-transform': 'translate(' + translateWidth + 'px, 0)',
-        });
-        slideNow++;
-      }
-    }
-
-    function prevSlide() {
-      if (slideNow == 1 || slideNow <= 0 || slideNow > slideCount) {
-        translateWidth = -$('#viewport').width() * (slideCount - 1);
-        $('#slidewrapper').css({
-          'transform': 'translate(' + translateWidth + 'px, 0)',
-          '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
-          '-ms-transform': 'translate(' + translateWidth + 'px, 0)',
-        });
-        slideNow = slideCount;
-      } else {
-        translateWidth = -$('#viewport').width() * (slideNow - 2);
-        $('#slidewrapper').css({
-          'transform': 'translate(' + translateWidth + 'px, 0)',
-          '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
-          '-ms-transform': 'translate(' + translateWidth + 'px, 0)',
-        });
-        slideNow--;
-      }
-    }
+   
 // Видео слайдер попап
 jQuery(document).ready(function() {
   jQuery("a.popupbox-video").fancybox({
@@ -261,7 +192,7 @@ $('.owl-carousel').owlCarousel({
     },
     600:{
       items:3,
-      nav:false
+      nav:true,
     },
     1000:{
       items:3,
@@ -271,167 +202,92 @@ $('.owl-carousel').owlCarousel({
   }
 });
 // Карта гугла
-function initMap() {
-        // Styles a map in night mode.
-        var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 52.40, lng: 54.98333},
-          zoom: 12,
-          styles: [
-          {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
-          {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
-          {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
-          {
-            featureType: 'administrative.locality',
-            elementType: 'labels.text.fill',
-            stylers: [{color: '#d59563'}]
-          },
-          {
-            featureType: 'poi',
-            elementType: 'labels.text.fill',
-            stylers: [{color: '#d59563'}]
-          },
-          {
-            featureType: 'poi.park',
-            elementType: 'geometry',
-            stylers: [{color: '#263c3f'}]
-          },
-          {
-            featureType: 'poi.park',
-            elementType: 'labels.text.fill',
-            stylers: [{color: '#6b9a76'}]
-          },
-          {
-            featureType: 'road',
-            elementType: 'geometry',
-            stylers: [{color: '#38414e'}]
-          },
-          {
-            featureType: 'road',
-            elementType: 'geometry.stroke',
-            stylers: [{color: '#212a37'}]
-          },
-          {
-            featureType: 'road',
-            elementType: 'labels.text.fill',
-            stylers: [{color: '#9ca5b3'}]
-          },
-          {
-            featureType: 'road.highway',
-            elementType: 'geometry',
-            stylers: [{color: '#746855'}]
-          },
-          {
-            featureType: 'road.highway',
-            elementType: 'geometry.stroke',
-            stylers: [{color: '#1f2835'}]
-          },
-          {
-            featureType: 'road.highway',
-            elementType: 'labels.text.fill',
-            stylers: [{color: '#f3d19c'}]
-          },
-          {
-            featureType: 'transit',
-            elementType: 'geometry',
-            stylers: [{color: '#2f3948'}]
-          },
-          {
-            featureType: 'transit.station',
-            elementType: 'labels.text.fill',
-            stylers: [{color: '#d59563'}]
-          },
-          {
-            featureType: 'water',
-            elementType: 'geometry',
-            stylers: [{color: '#17263c'}]
-          },
-          {
-            featureType: 'water',
-            elementType: 'labels.text.fill',
-            stylers: [{color: '#515c6d'}]
-          },
-          {
-            featureType: 'water',
-            elementType: 'labels.text.stroke',
-            stylers: [{color: '#17263c'}]
-          }
-          ]
-        });
-      }
-// 
 // 
 // Калькулятор \\\0.85 это Скидка в 15% [#discount-price] менять на свое усматрение
 $(function() {
+  
   $("#price").on("click", function() {
-    var sum = 0;
+    var sum = 47000;
     var pro = 0;
     $("#price :checked").each(function() {
-      sum += parseInt($(this).val());
+      sum -= parseInt($(this).val());
     });
-    $("#price :checked").each(function() {
-      var title; 
-      if(title = $('#btn-unv').is(':checked') ) {
-        document.getElementById('js1').style.color="#e73b3b";
-        document.getElementById('js1').style.backgroundImage="url(img/check.png)";
-        document.getElementById('js1').style.backgroundPosition="0px 13px";
-      } else {
-        document.getElementById('js1').style.color="#3c434a";
-        document.getElementById('js1').style.backgroundImage="url(img/list-pic1.png)";
-        document.getElementById('js1').style.backgroundPosition="0px 20px";;
-      };
-      var title1; 
-      if(title1 = $('#btn-experience').is(':checked') ) {
-        document.getElementById('js2').style.color="#e73b3b";
-        document.getElementById('js2').style.backgroundImage="url(img/check.png)";
-        document.getElementById('js2').style.backgroundPosition="0px 13px";
-      } else {
-        document.getElementById('js2').style.color="#3c434a";
-        document.getElementById('js2').style.backgroundImage="url(img/list-pic1.png)";
-        document.getElementById('js2').style.backgroundPosition="0px 20px";;
-      }
-      var title2; 
-      if(title2 = $('#btn-qualification').is(':checked') ) {
-        document.getElementById('js3').style.color="#e73b3b";
-        document.getElementById('js3').style.backgroundImage="url(img/check.png)";
-        document.getElementById('js3').style.backgroundPosition="0px 13px";
-      } else {
-        document.getElementById('js3').style.color="#3c434a";
-        document.getElementById('js3').style.backgroundImage="url(img/list-pic1.png)";
-        document.getElementById('js3').style.backgroundPosition="0px 20px";;
-      }
-      var title3; 
-      if(title3 = $('#btn-prison').is(':checked') ) {
-        document.getElementById('js4').style.color="#e73b3b";
-        document.getElementById('js4').style.backgroundImage="url(img/check.png)";
-        document.getElementById('js4').style.backgroundPosition="0px 13px";
-      } else {
-        document.getElementById('js4').style.color="#3c434a";
-        document.getElementById('js4').style.backgroundImage="url(img/list-pic1.png)";
-        document.getElementById('js4').style.backgroundPosition="0px 20px";;
-      }
-      var title4; 
-      if(title4 = $('#btn-instr').is(':checked') ) {
-        document.getElementById('js5').style.color="#e73b3b";
-        document.getElementById('js5').style.backgroundImage="url(img/check.png)";
-        document.getElementById('js5').style.backgroundPosition="0px 13px";
-      } else {
-        document.getElementById('js5').style.color="#3c434a";
-        document.getElementById('js5').style.backgroundImage="url(img/list-pic1.png)";
-        document.getElementById('js5').style.backgroundPosition="0px 20px";;
-      }
-      var title5; 
-      if(title5 = $('#btn-audit').is(':checked') ) {
-        document.getElementById('js6').style.color="#e73b3b";
-        document.getElementById('js6').style.backgroundImage="url(img/check.png)";
-        document.getElementById('js6').style.backgroundPosition="0px 13px";
-      } else {
-        document.getElementById('js6').style.color="#3c434a";
-        document.getElementById('js6').style.backgroundImage="url(img/list-pic1.png)";
-        document.getElementById('js6').style.backgroundPosition="0px 20px";;
-      }
+    $("#price input:checked").each(function() {
+		  var title; 
+		  if(title = $('#btn-unv').is(':checked') ) {
+			document.getElementById('js1').style.color="#e73b3b";
+			document.getElementById('js1').style.backgroundImage="url(img/check.png)";
+			document.getElementById('js1').style.backgroundPosition="0px 13px";
+		  } else {
+			document.getElementById('js1').style.color="#3c434a";
+			document.getElementById('js1').style.backgroundImage="url(img/list-pic1.png)";
+			document.getElementById('js1').style.backgroundPosition="0px 20px";;
+		  };
+		  var title1; 
+		  if(title1 = $('#btn-experience').is(':checked') ) {
+			document.getElementById('js2').style.color="#e73b3b";
+			document.getElementById('js2').style.backgroundImage="url(img/check.png)";
+			document.getElementById('js2').style.backgroundPosition="0px 13px";
+		  } else {
+			document.getElementById('js2').style.color="#3c434a";
+			document.getElementById('js2').style.backgroundImage="url(img/list-pic1.png)";
+			document.getElementById('js2').style.backgroundPosition="0px 20px";;
+		  }
+		  var title2; 
+		  if(title2 = $('#btn-qualification').is(':checked') ) {
+			document.getElementById('js3').style.color="#e73b3b";
+			document.getElementById('js3').style.backgroundImage="url(img/check.png)";
+			document.getElementById('js3').style.backgroundPosition="0px 13px";
+		  } else {
+			document.getElementById('js3').style.color="#3c434a";
+			document.getElementById('js3').style.backgroundImage="url(img/list-pic1.png)";
+			document.getElementById('js3').style.backgroundPosition="0px 20px";;
+		  }
+		  var title3; 
+		  if(title3 = $('#btn-prison').is(':checked') ) {
+			document.getElementById('js4').style.color="#e73b3b";
+			document.getElementById('js4').style.backgroundImage="url(img/check.png)";
+			document.getElementById('js4').style.backgroundPosition="0px 13px";
+		  } else {
+			document.getElementById('js4').style.color="#3c434a";
+			document.getElementById('js4').style.backgroundImage="url(img/list-pic1.png)";
+			document.getElementById('js4').style.backgroundPosition="0px 20px";;
+		  }
+		  var title4; 
+		  if(title4 = $('#btn-instr').is(':checked') ) {
+			document.getElementById('js5').style.color="#e73b3b";
+			document.getElementById('js5').style.backgroundImage="url(img/check.png)";
+			document.getElementById('js5').style.backgroundPosition="0px 13px";
+		  } else {
+			document.getElementById('js5').style.color="#3c434a";
+			document.getElementById('js5').style.backgroundImage="url(img/list-pic1.png)";
+			document.getElementById('js5').style.backgroundPosition="0px 20px";;
+		  }
+		  var title5; 
+		  if(title5 = $('#btn-audit').is(':checked') ) {
+			document.getElementById('js6').style.color="#e73b3b";
+			document.getElementById('js6').style.backgroundImage="url(img/check.png)";
+			document.getElementById('js6').style.backgroundPosition="0px 13px";
+		  } else {
+			document.getElementById('js6').style.color="#3c434a";
+			document.getElementById('js6').style.backgroundImage="url(img/list-pic1.png)";
+			document.getElementById('js6').style.backgroundPosition="0px 20px";;
+		  }
+		
     });
-    $("#sum").text(sum + pro);
-    $("#discount-price").text(sum *0.85);
+    $("#sum").text(sum + pro + ' Руб');
+    $("#discount-price").text(sum *0.85 + ' Руб');
   }); 
 });
 //     Калькулятор часть со стилями для блока
+
+
+$('.button-box').click(function(){
+	if($(this).hasClass('active')){
+		$(this).removeClass('active');
+		$('.price-generator').css('display','none');
+	}else{
+		$(this).addClass('active');
+		$('.price-generator').css('display','block');
+	}
+});
